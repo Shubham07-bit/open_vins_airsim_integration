@@ -2,9 +2,14 @@
 
 A complete integration framework for Visual-Inertial Odometry (VIO) using AirSim simulation, OpenVINS estimator, and ArduPilot flight controller.
 
-## Demo
+## Demo Video
 
-https://github.com/user-attachments/assets/a8f91f2d-15a9-4e5f-8d35-6a91d0c0b4d7
+A demonstration of the VIO system in action is available in the repository:
+- **[result.webm](result.webm)** - Flight demo (417s)
+
+![VIO System Demo](result.webm)
+
+For best viewing, download the `.webm` file and play locally.
 
 ## System Overview
 
