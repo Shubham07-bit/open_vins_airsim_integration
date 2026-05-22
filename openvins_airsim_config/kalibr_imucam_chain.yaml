@@ -1,0 +1,23 @@
+%YAML:1.0
+
+cam0:
+  T_imu_cam: # rotation from camera to IMU R_CtoI, position of camera in IMU p_CinI
+    # Camera is at X=0.50m forward, Y=0.00m, Z=-0.10m (up in NED) from IMU
+    # Camera optical axis aligned with body X-axis (forward-looking)
+    - [1.0, 0.0, 0.0, 0.50]
+    - [0.0, 1.0, 0.0, 0.00]
+    - [0.0, 0.0, 1.0, -0.10]
+    - [0.0, 0.0, 0.0, 1.00]
+  cam_overlaps: []
+  camera_model: pinhole
+  distortion_coeffs: [0.0, 0.0, 0.0, 0.0] # No distortion (AirSim renders perfect pinhole)
+  distortion_model: radtan
+  # Intrinsics: fx, fy, cx, cy
+  # For 640x480 with 90 degree horizontal FOV:
+  #   fx = 640 / (2 * tan(45deg)) = 320.0
+  #   fy = 320.0 (square pixels)
+  #   cx = 320.0 (image center)
+  #   cy = 240.0 (image center)
+  intrinsics: [320.0, 320.0, 320.0, 240.0]
+  resolution: [640, 480]
+  rostopic: /camera/image

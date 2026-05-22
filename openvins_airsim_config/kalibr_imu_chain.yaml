@@ -1,0 +1,39 @@
+%YAML:1.0
+
+imu0:
+  T_i_b:
+    - [1.0, 0.0, 0.0, 0.0]
+    - [0.0, 1.0, 0.0, 0.0]
+    - [0.0, 0.0, 1.0, 0.0]
+    - [0.0, 0.0, 0.0, 1.0]
+  # AirSim simulated IMU noise parameters
+  # Set slightly above actual sim noise to give estimator margin
+  accelerometer_noise_density: 1.0000e-2  # [ m / s^2 / sqrt(Hz) ]
+  accelerometer_random_walk: 1.0000e-2    # [ m / s^3 / sqrt(Hz) ]
+  gyroscope_noise_density: 1.0000e-3      # [ rad / s / sqrt(Hz) ]
+  gyroscope_random_walk: 1.0000e-4        # [ rad / s^2 / sqrt(Hz) ]
+  rostopic: /imu
+  time_offset: 0.0
+  update_rate: 200  # Bridge node IMU publishing rate
+  model: "kalibr"
+  # Identity matrices for simulated IMU (no misalignment)
+  Tw:
+    - [ 1.0, 0.0, 0.0 ]
+    - [ 0.0, 1.0, 0.0 ]
+    - [ 0.0, 0.0, 1.0 ]
+  R_IMUtoGYRO:
+    - [ 1.0, 0.0, 0.0 ]
+    - [ 0.0, 1.0, 0.0 ]
+    - [ 0.0, 0.0, 1.0 ]
+  Ta:
+    - [ 1.0, 0.0, 0.0 ]
+    - [ 0.0, 1.0, 0.0 ]
+    - [ 0.0, 0.0, 1.0 ]
+  R_IMUtoACC:
+    - [ 1.0, 0.0, 0.0 ]
+    - [ 0.0, 1.0, 0.0 ]
+    - [ 0.0, 0.0, 1.0 ]
+  Tg:
+    - [ 0.0, 0.0, 0.0 ]
+    - [ 0.0, 0.0, 0.0 ]
+    - [ 0.0, 0.0, 0.0 ]
